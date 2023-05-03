@@ -3,9 +3,25 @@ function renderUsers(usersArray) {
   // TODO: usersArray არის სერვერიდან დაბრუნებული ობიექტების მასივი
   // TODO: ამ მონაცმების მიხედვით html ში ჩასვით ცხრილი როგორც "ცხრილი.png" შია
 
-  console.log(usersArray);
-  userActions(); // ყოველ რენდერზე ახლიდან უნდა მივაბათ ივენთ ლისნერები
+  let usersMarkup = "";
+
+  for (let i = 0; i < usersArray.length; i++) {
+    const user = usersArray[i];
+    const userMarkup = `
+        <div class="user">
+          <h2>${user.name}</h2>
+          <p>Email: ${user.email}</p>
+          <p>Phone: ${user.phone}</p>
+        </div>
+      `;
+    usersMarkup += userMarkup;
+  }
+
+  document.getElementById("users-container").innerHTML = usersMarkup;
 }
+
+console.log(usersArray);
+userActions(); // ყოველ რენდერზე ახლიდან უნდა მივაბათ ივენთ ლისნერები
 
 // TODO: დაასრულე
 function userActions() {

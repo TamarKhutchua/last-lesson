@@ -1,0 +1,30 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 2px solid black;
+  text-align: center;
+}
+
+th {
+  padding: 8px;
+  font-weight: bold;
+}
+td {
+  padding: 13px;
+}
+.highlighter1 {
+  background-color: #4caf50;
+  padding: 8px 17px;
+  border: none;
+  border-radius: 4px;
+}
+.highlighter2 {
+  background-color: red;
+  padding: 8px 17px;
+  border: none;
+  border-radius: 4px;
+}
