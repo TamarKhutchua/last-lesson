@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <table>
+    <table id="myTable">
       <tbody>
         <tr>
           <th>id</th>
@@ -30,8 +30,14 @@
           <td>5784578563</td>
           <td>2000</td>
           <td>female</td>
-          <td><button class="highlighter1">Edit</button></td>
-          <td><button class="highlighter2">Delete</button></td>
+          <td>
+            <button class="highlighter1" onclick="updateRow(this)">Edit</button>
+          </td>
+          <td>
+            <button class="highlighter2" onclick="clearRow(this)">
+              Delete
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
